@@ -58,12 +58,6 @@ VALUES
 (2, (SELECT id FROM vets WHERE name = 'Stephanie Mendez')),
 (2, (SELECT id FROM vets WHERE name = 'Jack Harkness'));
 
--- Result in specializations table
--- (1, 1),
--- (3, 1),
--- (3, 2),
--- (4, 2);
-
 INSERT INTO visits (animal_id, vet_id, date_of_visit)
 VALUES
 (1, 1, DATE '2020-05-24'),
