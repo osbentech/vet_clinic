@@ -2,7 +2,7 @@
 
 CREATE TABLE animals (
     
-    id: BIGSERIAL NOT NULL PRIMARY KEY,
+    id BIGSERIAL NOT NULL PRIMARY KEY,
     name VARCHAR (100) NOT NULL,
     date_of_birth date,
     escape_attempts integer,
