@@ -91,7 +91,7 @@ ON a.owner_id = o.id
 GROUP BY o.full_name 
 ORDER BY "# of Animals" DESC LIMIT 1;
 
--- Thursday
+-- Thursday work
 SELECT a.name AS "Animal",
 ve.name AS "Veterinarian",
 vi.date_of_visit AS "Day of Visit"
