@@ -15,7 +15,6 @@ In this project, I use a relational database to create the data structure for a 
         Write more complex queries to use them to answer questions.
 
 
-
 ## Getting Started
 
 This repository includes files with plain SQL that can be used to recreate a database:
