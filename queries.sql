@@ -123,12 +123,13 @@ JOIN vets ve ON ve.id = vi.vet_id
 WHERE ve.name = 'Stephanie Mendez' AND date_of_visit
 BETWEEN DATE '2020-04-01' AND '2020-08-30';
 
-SELECT a.name AS "Animal",
-COUNT(vi.animal_id) AS visit_count
+SELECT a.name AS "Animal who visited Stephanie Mendez",
+vi.date_of_visit AS "Day of Visit(April 1st to August 30th, 2020)"
 FROM animals a
 JOIN visits vi ON vi.animal_id = a.id
-GROUP BY a.name
-ORDER BY visit_count DESC LIMIT 1;
+JOIN vets ve ON ve.id = vi.vet_id
+WHERE ve.name = 'Stephanie Mendez' AND date_of_visit
+BETWEEN DATE '2020-04-01' AND '2020-08-30';
 
 SELECT a.name AS "Animal",
 ve.name AS "Vet Name",
