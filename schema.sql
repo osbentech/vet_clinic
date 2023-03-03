@@ -55,3 +55,21 @@ CREATE TABLE visits (
     vet_id INT NULL REFERENCES vets(id) ON DELETE CASCADE,
     date_of_visit DATE NOT NULL
 );
+
+-- week 2
+-- Add an email column to your owners table
+BEGIN;
+
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+CREATE INDEX idx_animal_id ON visits(animal_id);
+ANALYZE;
+
+SAVEPOINT sp1;
+
+CREATE INDEX idx_vet_id ON visits (vet_id);
+ANALYZE;
+
+CREATE INDEX idx_email ON owners (email);
+
+COMMIT;
